@@ -5,11 +5,11 @@ import (
 )
 
 const (
-	apiGithubAccessToken = "SECRET_GITHUB_ACCESS_TOKEN"
+	secretGithubAccessToken = "SECRET_GITHUB_ACCESS_TOKEN"
 	LogLevel                = "info"
 )
 
-var githubAccessToken = os.Getenv(apiGithubAccessToken)
+var githubAccessToken = os.Getenv(secretGithubAccessToken)
 
 //func init() {
 //	err := godotenv.Load()

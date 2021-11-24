@@ -8,8 +8,6 @@ import (
 )
 
 func TestGetMockedContext(t *testing.T) {
-	// Make the request and response, attach it to the context using the function
-	// then check the values
 	request, err := http.NewRequest(http.MethodGet, "http://localhost:123/something", nil)
 	assert.Nil(t, err)
 	response := httptest.NewRecorder()
@@ -23,8 +21,4 @@ func TestGetMockedContext(t *testing.T) {
 	assert.EqualValues(t, 1, len(c.Request.Header))
 	assert.EqualValues(t, "true", c.GetHeader("x-mock"))
 	assert.EqualValues(t, "true", c.GetHeader("X-Mock"))
-}
-
-func TestMutex(t *testing.T) {
-
 }
